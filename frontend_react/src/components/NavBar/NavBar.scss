@@ -4,7 +4,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background: rgba(255,255,255, 0.25);
+    background: rgba(39, 39, 39, 0.6);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     border: 1px solid rgba(255,255,255, 0.18);
@@ -18,12 +18,10 @@
     align-items: center;
 
     img {
-        width: 90px;
-        height: 20px;
+        width: 130px;
 
         @media screen and (min-width: 2000px) {
-            width: 180px;
-            height: 40px;
+            width: 180px;            
         }
     }
 }
@@ -31,7 +29,7 @@
 .app__navbar-links {
     flex: 1;
     display:flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
 
     list-style: none;
@@ -42,10 +40,9 @@
 
         flex-direction: column;
 
-
         div {
-            width: 5px;
-            height: 5px;
+            width: 7px;
+            height: 7px;
             background: transparent;
             border-radius: 50%;
 
@@ -53,7 +50,7 @@
         }
 
         a {
-            color: var(--gray-color);
+            color: var(--text-color);
             text-decoration: none;
             flex-direction: column;
             text-transform: uppercase;
@@ -91,7 +88,7 @@
     svg {
         width: 70%;
         height: 70%;
-        color: var(--white-color);
+        color: var(--gray-color);
     }
 
     div {
@@ -109,7 +106,7 @@
         align-items: flex-end;
         flex-direction: column;
         background: url('../../assets/bgWhite.png');
-        background-color: var(--white-color);
+        background-color: var(--gray-color);
         background-size: cover;
         background-repeat: repeat;
 
@@ -138,7 +135,7 @@
                 margin: 1rem;
 
                 a {
-                    color: var(--gray-color);
+                    color: var(--text-color);
                     text-decoration: none;
                     font-size: 1rem;
                     text-transform: uppercase;

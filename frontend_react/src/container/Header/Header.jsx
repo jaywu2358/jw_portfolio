@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useTypewriter } from 'react-simple-typewriter'
 
 import { images } from '../../constants';
 import './Header.scss';
@@ -19,7 +20,22 @@ const scaleVariants = {
   }
 }
 
+
+
 const Header = () => {
+
+  const [text, count] = useTypewriter ({
+    words: [
+      "Java Full Stack", 
+      "Backend", 
+      "Frontend ",
+      "React",
+      "Vue"
+    ],
+    loop: true,
+    delaySpeed: 2000
+  })
+
   return (
     <div className="app__header app__flex">
       <motion.div 
@@ -37,19 +53,23 @@ const Header = () => {
         </div>
 
         <div className="tag-cmp app__flex">
-          <p className="p-text">Java Full Stack Developer</p>
-          <p className="p-text">Freelancer</p>
+          
+          <motion.h2 
+          whileInView={{ opacity: [0, 1], scale:[0, 1] }}
+          transition={{ duration: 0.5, delayChildren: 0.5 }}
+          >{text} developer</motion.h2>
+          
         </div>
        </div>
       </motion.div>
 
       <motion.div
-        whileInView={{ opacity: [0, 1] }}
+        whileInView={{ opacity: [0, 1], scale:[0, 1] }}               
         transition={{ duration: 0.5, delayChildren: 0.5 }}
         className="app__header-img">
           <img src={images.profile} alt="profile_bg" />
           <motion.img
-            whileInView={{ scale: [0, 1] }}
+            whileInView={{ scale: [0, 1.25] }}
             transition={{ duration: 1, ease: 'easeInOut' }}          
             src={images.circle}
             alt="profile-circle"
@@ -62,7 +82,7 @@ const Header = () => {
         whileInView={scaleVariants.whileInView}
         className="app__header-circles"
         >
-          {[images.flutter, images.redux, images.sass].map((circle, index) => (
+          {[images.postgresql, images.java, images.spring, images.rest, images.react ].map((circle, index) => (
             <div className="circle-cmp app__flex" key={`circle-${index}`}>
               <img src={circle} alt="circle" />
             </div>

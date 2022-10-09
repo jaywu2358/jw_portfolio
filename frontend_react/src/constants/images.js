@@ -22,7 +22,7 @@ import about02 from '../assets/about02.png';
 import about03 from '../assets/about03.png';
 import about04 from '../assets/about04.png';
 import profile from '../assets/profile.png';
-import circle from '../assets/circle.svg';
+import circle from '../assets/circle.png';
 import logo from '../assets/logo.png';
 import adidas from '../assets/adidas.png';
 import amazon from '../assets/amazon.png';
@@ -31,6 +31,10 @@ import bolt from '../assets/bolt.png';
 import nb from '../assets/nb.png';
 import skype from '../assets/skype.png';
 import spotify from '../assets/spotify.png';
+import java from '../assets/java.png';
+import postgresql from '../assets/postgresql.png';
+import spring from '../assets/spring boot.png';
+import rest from '../assets/rest-api-icon.png';
 
 export default {
   email,
@@ -66,4 +70,8 @@ export default {
   nb,
   skype,
   spotify,
+  java,
+  spring,
+  postgresql,
+  rest
 };
