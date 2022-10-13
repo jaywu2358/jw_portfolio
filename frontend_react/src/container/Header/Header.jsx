@@ -26,11 +26,12 @@ const Header = () => {
 
   const [text, count] = useTypewriter ({
     words: [
-      "Java Full Stack", 
-      "Backend", 
-      "Frontend ",
-      "React",
-      "Vue"
+      "Hi!, My name is Jay Wu",
+      "Java Full Stack Developer", 
+      "Backend Developer", 
+      "Frontend Developer",
+      "React Developer",
+      "Vue Developer"
     ],
     loop: true,
     delaySpeed: 2000
@@ -38,57 +39,65 @@ const Header = () => {
 
   return (
     <div className="app__header app__flex">
-      <motion.div 
-      whileInView={{ x: [-100, 0], opacity: [0, 1] }}
-      transition={{ duration: 0.5 }}
-      className="app__header-info"
-      >
-       <div className="app__header-badge">
-        <div className="badge-cmp app__flex">
-          <span>👋</span>
-          <div style={{ marginLeft: 20}}>
-            <p className="p-text">Hello, I am</p>
-            <h1 className="head-text">Jay</h1>
-          </div>
-        </div>
-
-        <div className="tag-cmp app__flex">
-          
-          <motion.h2 
-          whileInView={{ opacity: [0, 1], scale:[0, 1] }}
-          transition={{ duration: 0.5, delayChildren: 0.5 }}
-          >{text} developer</motion.h2>
-          
-        </div>
-       </div>
-      </motion.div>
 
       <motion.div
         whileInView={{ opacity: [0, 1], scale:[0, 1] }}               
         transition={{ duration: 0.5, delayChildren: 0.5 }}
         className="app__header-img">
-          <img src={images.profile} alt="profile_bg" />
+          
+          <motion.div 
+          whileInView={{ x: [-100, 0], opacity: [0, 1] }}
+          transition={{ duration: 0.5 }}
+          className="app__header-info"
+          >
+          
+           
+          <div className="app__header-badge">
+            <motion.div             
+            whileInView={{ scale: [0, 1.5, 0.65, 1] }}
+            transition={{ duration: 2, ease: 'easeInOut' }} 
+            className="badge-cmp app__flex">
+              <motion.div
+                className="box"
+                animate={{
+                  scale: [0.4, 0.8 , 0.8, 0.4, 0.8],
+                  rotate: [0, 0, 180, 180, 0],
+                  borderRadius: ["0%", "0%", "50%", "50%", "0%"]
+                }}
+                transition={{
+                  duration: 2,
+                  ease: "easeInOut",
+                  times: [0, 0.2, 0.5, 0.8, 1],
+                  repeat: Infinity,
+                  repeatDelay: 1
+                }}
+              />  
+              <div>
+                <motion.h2               
+                whileInView={{ opacity: [0, 1], scale:[0, 1] }}
+                transition={{ duration: 1, delayChildren: 0.5 }}
+                
+                >SOFTWARE ENGINEER</motion.h2>                
+              </div>
+            </motion.div>            
+          
+            <motion.h1               
+            whileInView={{ opacity: [0, 1], scale:[0, 1] }}
+            transition={{ duration: 1, delayChildren: 0.5 }}
+            >"{text}"</motion.h1>
+              
+            
+          </div>
+          </motion.div>
+
+          
           <motion.img
-            whileInView={{ scale: [0, 1.25] }}
-            transition={{ duration: 1, ease: 'easeInOut' }}          
+            whileInView={{ scale: [0, 1.5, 0.65, 0.8, 0.75] }}
+            transition={{ duration: 2, ease: 'easeInOut' }}                               
             src={images.circle}
             alt="profile-circle"
             className="overlay_circle"
           />          
-      </motion.div>
-
-      <motion.div
-        variant={scaleVariants}
-        whileInView={scaleVariants.whileInView}
-        className="app__header-circles"
-        >
-          {[images.postgresql, images.java, images.spring, images.rest, images.react ].map((circle, index) => (
-            <div className="circle-cmp app__flex" key={`circle-${index}`}>
-              <img src={circle} alt="circle" />
-            </div>
-
-          ))}
-        
       </motion.div>
 
     </div>

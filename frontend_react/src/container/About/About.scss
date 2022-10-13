@@ -2,6 +2,17 @@
     flex: 1;
     width: 100%;
     flex-direction: column;
+
+    h2 {
+        color: var(--text-color);
+        
+        font-weight: 800;
+    }
+    p {
+        color: var(--text-color);
+        font-size: 16px;
+        font-weight: 600;
+    }
 }
 
 
@@ -20,6 +31,10 @@
     align-items: flex-start;
     flex-direction: column;
     margin: 2rem;
+    
+    h2 {
+        color: var(--secondary-color);
+    }
     
     img {
         width: 100%;

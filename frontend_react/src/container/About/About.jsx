@@ -20,12 +20,14 @@ const About = () => {
   return (
     <>
       <h2 className="head-text">
-        I know that
-        <span> Good Development</span>
+      An Experienced  
+        <span> forward-looking, </span>
         <br />
-        means
-        <span> Good Business</span>
+        
+        <span>Proactive </span>
+        developer, trained in the following: 
         </h2>
+        
 
         <div className="app__profiles">
           {abouts.map((about, index) => (

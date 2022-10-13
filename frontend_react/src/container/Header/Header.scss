@@ -1,6 +1,5 @@
 #home {
-    position: relative;
-    background: url('../../assets/bgWhite.png');
+    position: relative;    
     background-size: cover;
     background-repeat: repeat;
     background-position: center;
@@ -16,21 +15,31 @@
 
     p {
         color: var(--text-color);
-        font-size: 11pt;; 
+        font-size: 12pt;; 
     }
 
     h2 {
-        font-weight: 100;
+        padding-top: 2rem;
+        font-weight: 400;
+        font-size: 26pt;
+        color: rgb(100, 100, 100);
+
+        @media screen and (max-width: 1200px) {
+            font-size: 18pt;
+        }
     }
+
+   
 }
+
+
 
 .app__header {
     flex: 1;
     width: 100%;
     height: 100%;
     flex-direction: row;
-
-    padding: 6rem 2rem 0;
+    
 
     @media screen and (min-width: 2000px) {
         padding-top: 8rem;
@@ -43,171 +52,83 @@
     @media screen and (max-width: 400px) {
         padding: 6rem 1rem 2rem;
     }
+
+    h1 {
+        font-size: 56px;    
+        border-right: .1em solid #bea168;
+
+        @media screen and (max-width: 1200px) {
+            font-size: 36px;
+        }        
+    }
+}
+
+
+
+.box {
+    width: 200px;
+    height: 200px;
+    background: rgba(210,210,210,1);
+
+    @media screen and (max-width: 1200px ){
+        width: 90px;
+        height: 90px;
+    }
 }
 
 .app__header-info {
-    flex: 0.65;
+    flex: 1;
     display:flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     height: 100%;
 
     @media screen and (max-width: 2000px) {
         width: 100%;
         margin-right: 0rem;
     }
+
+    
 }
 
 .app__header-badge {
     width: 100%;
+    height: 100%;
     display:flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     color: var(--text-color);
     padding-bottom: 1rem;
-    padding-top: 4rem;
+    padding-top: 1rem;
 
     .badge-cmp, .tag-cmp {
-        padding: 1rem 2rem;
+        padding: 1rem 1rem;
         border: var(--text-color);
         
         border-radius: 15px;
-        flex-direction: row;
-        width: auto;
-        background: rgba(210,210,210, 0.1);
-        box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
-    }
-
-    .tag-cmp {
         flex-direction: column;
-        margin-top: 3rem;
-        
-        p {
-            width: 100%;
-            text-transform: uppercase;
-            text-align: right;
-            color: var(--text-color);
-        }
+        width: auto;
+
     }
-
-    span {
-        font-size: 2.5rem;
-        
-        @media screen and (min-width: 2000px) {
-            font-size: 5rem;
-
-        }
-    }
-
-    
 
     @media screen and (max-width: 1200px){
-        justify-content: flex-start;
-        align-items: flex-start;
+        justify-content: center;
+        align-items: center;
         
     }
 
 }
 
-
-.app__header-circles {
-    flex: 0.7;
-    display:flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    height: 100%;
-    margin-left: 1rem;
-    z-index: 5;
-
-    div {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        background: rgba(210,210,210, 0.1);
-        box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
-
-        &:hover {
-            box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
-        }
-
-        img {
-            width: 60%;
-            height: 60%;
-            
-        }
-    }
-
-    div:nth-child(1) {
-        width: 140px;
-        height: 140px;
-    }
-
-    div:nth-child(2) {
-        margin-left: 3rem;
-        width: 180px;
-        height: 180px;
-        img {
-            width: 170px;
-            height: 170px;
-        }
-    }
-
-    div:nth-child(3) {
-        width: 110px;
-        height: 120px;
-    }
-
-    div:nth-child(4) {
-        margin-left: 2rem;
-        width: 140px;
-        height: 140px;
-    }
-
-    
-
-
-    @media screen and (min-width: 2000px){
-        div:nth-child(1) {
-            width: 170px;
-            height: 170px;            
-        }
-    
-        div:nth-child(2) {
-            
-            width: 400px;
-            height: 400px;
-        }
-    
-        div:nth-child(3) {
-            width: 200px;
-            height: 200px;
-        }
-        
-    }
-
-    @media screen and (max-width: 1200px) {
-        width: 100%;
-        flex-direction: row;
-        flex-wrap: wrap;
-        margin-left: 0;
-
-        div {
-            margin: 1rem;
-        }
-        
-    }
-}
 
 .app__header-img {
     flex: 1;
     height: 100%;
 
     display:flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+    justify-content: center;
+    align-items: center;
     position: relative;
 
     img {
@@ -218,13 +139,14 @@
 
     .overlay_circle {
         position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 0;
-        width: 100%;
-        height: 90%;
+        
+        width: 750px;
+        height: 750px;
 
+        @media screen and (max-width: 1200px ){
+            width: 450px;
+            height: 450px;
+        }
         
     }
 }

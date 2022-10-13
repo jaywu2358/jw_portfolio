@@ -2,6 +2,14 @@
     flex: 1;
     width: 100%;
     flex-direction: column;
+
+    h2 {
+        color: var(--secondary-color);
+    }
+
+    h3 {
+        color: var(--text-color);
+    }
 }
 
 .app__footer-cards {
@@ -23,7 +31,7 @@
         padding: 1rem;
         border-radius: 10px;
         cursor: pointer;
-        background-color: #fef4f5;
+        background-color: #d2d2d2;
 
         transition: all 0.3s ease-in-out;
 
@@ -34,17 +42,18 @@
         }
 
         p {
-            font-weight: 600;
+            font-weight: 600;         
 
         }
 
         a {
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 700;
+            font-size: 15px;
         }
 
         &:hover {
-            box-shadow: 0 0 25px #fef4f5;
+            box-shadow: 0 0 15px #fef4f5;
         }
 
         @media screen and (max-width: 450px) {
@@ -60,7 +69,7 @@
 }
 
 .app__footer-cards .app__footer-card:last-child {
-    background-color: #f2f7fb;
+    background-color: #d2d2d2;
 }
 
 .app__footer-form {
@@ -82,8 +91,8 @@
             padding: 0.95rem;
             border: none;
             border-radius: 7px;
-            background-color: var(--primary-color);
-
+            background-color: rgba(56, 56, 56, 0.3);
+            font-size: 16px;
             font-family: var(--font-base);
             color: var(--secondary-color);
             outline: none;
@@ -94,22 +103,27 @@
         }
 
         &:hover {
-            box-shadow: 0 0 25px var(--primary-color);
+            box-shadow: 0 0 15px #515151;
         }
     }
 
     button {
-        padding: 1rem 2rem;
+        padding: 1rem 1rem;
         border-radius: 10px;
         border: none;
         background-color: var(--secondary-color);
-
-        font-weight: 500;
-        color: var(--white-color);
+        font-size: 20px;
+        font-weight: 700;
+        color: black;
         outline: none;
         margin: 2rem 0 0 0;
         font-family: var(--font-base);
         cursor: pointer;
+
+        &:hover {
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 0 15px #515151;
+        }
     }
 
     @media screen and (max-width: 768px) {

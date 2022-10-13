@@ -36,8 +36,10 @@ const Footer = () => {
 
   return (
     <>
-      <h2 className="head-text">Take a coffee & Chat with Me</h2>
-
+      <div className='title'>
+      <h2 className="head-text">Take a coffee <h3>&nbsp;&&nbsp;</h3> Chat with Me</h2>
+      </div>
+      
       <div className="app__footer-cards">
         <div className="app__footer-card">
           <img src={images.email} alt="email" />

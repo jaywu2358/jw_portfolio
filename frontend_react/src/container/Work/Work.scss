@@ -2,6 +2,15 @@
     flex: 1;
     width: 100%;
     flex-direction: column;
+
+    h2 {
+        color: var(--text-color);
+    }
+
+    p {         
+        color: var(--text-color);
+        font-size: 26px;
+    }
 }
 
 .app__work-filter {
@@ -51,18 +60,18 @@
     .app__work-item {
         width: 270px;
         flex-direction: column;
-
+       
         margin: 2rem;
         padding: 1rem;
         border-radius: 0.5rem;
-        background-color: #fff;
-        color:#000;
+        background-color: rgba(161, 161, 161, 0.2);
+        color:var(--text-color);
 
         cursor: pointer;
         transition: all 0.3s ease;
 
         &:hover {
-            box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 15px rgba(140, 140, 140, 0.2);
         }
 
         @media screen and (min-width: 2000px) {
@@ -139,15 +148,27 @@
     flex-direction: column;
 
     h4 {
-        margin-top: 1rem;
-        line-height: 1.5;
+        margin-top: 2rem;
+        line-height: 1.5; 
+        font-size: 20px;   
+        color: var(--secondary-color);    
+    }
+
+    p {
+        font-size: 18px;
     }
 
     .app__work-tag {
         position: absolute;
         padding: 0.5rem 1rem;
         border-radius: 10px;
-        background-color: #fff;
+        background-color: #fff;        
         top: -25px;
+
+        p {
+            color: black;
+            font-weight: 600;
+            font-size: 16px;
+        }
     }
 }
