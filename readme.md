@@ -62,10 +62,13 @@ Having already learned Vue.js, I chose to use React for this project to expand m
 
 5. Send me an email, call me, or send a message directly!
 <img src="https://github.com/jaywu2358/jw_portfolio/assets/106934206/fcc8a0b9-f95e-4cfc-92c8-0639f26fef2a"/>
+</br>
+</br>
 
 6. Fully responsive design.
 <img src="https://github.com/jaywu2358/jw_portfolio/assets/106934206/04721555-2403-46f3-8b0b-8013f92b10b8"/>
-
+</br>
+</br>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
